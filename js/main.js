@@ -19,8 +19,10 @@
         submenu.classList.contains('active') ? document.querySelector('div.nav-link svg path').setAttribute("d", "M112 328l144-144 144 144"): document.querySelector('div.nav-link svg path').setAttribute("d", "M112 184l144 144 144-144");
     });
     
+    let playr;
+    
     document.addEventListener('DOMContentLoaded', () => {
-        const player = new Plyr('#player');
+        playr = new Plyr('#player');
         trailer.querySelector('video').load();
     })
 
@@ -29,6 +31,6 @@
     });
     document.querySelector('.modal-video .close').addEventListener('click', () => {
         trailer.classList.remove('active');
-        player.stop();
+        playr.stop();
     });
 }());
