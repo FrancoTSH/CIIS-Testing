@@ -21,7 +21,9 @@
 
     document.querySelector('.video-selector').addEventListener('click', () => {
         trailer.querySelector('source').setAttribute("src","assets/videos/video_ciis.mp4");
-        player.source = "assets/videos/video_ciis.mp4";
+        if(typeof player === "undefined") {
+            const player = new Plyr('#player');
+        }
         trailer.classList.add('active');
     });
     document.querySelector('.modal-video .close').addEventListener('click', () => {
