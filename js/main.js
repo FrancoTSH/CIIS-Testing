@@ -22,14 +22,11 @@
     let playerxd;
 
     document.querySelector('.video-selector').addEventListener('click', () => {
-        trailer.querySelector('source').setAttribute("src","assets/videos/video_ciis.mp4");
-        if(typeof playerxd === "undefined") {
-            playerxd = new Plyr('#player');
-        }
+        trailer.querySelector('video').load();
         trailer.classList.add('active');
     });
     document.querySelector('.modal-video .close').addEventListener('click', () => {
         trailer.classList.remove('active');
-        playerxd.stop();
+        player.stop();
     });
 }());
