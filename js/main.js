@@ -19,7 +19,9 @@
         submenu.classList.contains('active') ? document.querySelector('div.nav-link svg path').setAttribute("d", "M112 328l144-144 144 144"): document.querySelector('div.nav-link svg path').setAttribute("d", "M112 184l144 144 144-144");
     });
     
-    document.addEventListener('DOMContentLoaded', () => trailer.querySelector('video').load())
+    document.addEventListener('DOMContentLoaded', () => {
+        const player = new Plyr('#player');
+    })
 
     document.querySelector('.video-selector').addEventListener('click', () => {
         trailer.classList.add('active');
