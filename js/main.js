@@ -21,6 +21,7 @@
 
     document.querySelector('.video-selector').addEventListener('click', () => {
         trailer.querySelector('source').setAttribute("src","assets/videos/video_ciis.mp4");
+        player.source = "assets/videos/video_ciis.mp4";
         trailer.classList.add('active');
     });
     document.querySelector('.modal-video .close').addEventListener('click', () => {
