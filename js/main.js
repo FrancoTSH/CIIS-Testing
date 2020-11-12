@@ -21,6 +21,7 @@
     
     document.addEventListener('DOMContentLoaded', () => {
         const player = new Plyr('#player');
+        trailer.querySelector('video').load();
     })
 
     document.querySelector('.video-selector').addEventListener('click', () => {
