@@ -19,10 +19,9 @@
         submenu.classList.contains('active') ? document.querySelector('div.nav-link svg path').setAttribute("d", "M112 328l144-144 144 144"): document.querySelector('div.nav-link svg path').setAttribute("d", "M112 184l144 144 144-144");
     });
     
-    let playerxd;
+    document.addEventListener('DOMContentLoaded', () => trailer.querySelector('video').load())
 
     document.querySelector('.video-selector').addEventListener('click', () => {
-        trailer.querySelector('video').load();
         setTimeout(function(){ trailer.classList.add('active'); }, 800);
     });
     document.querySelector('.modal-video .close').addEventListener('click', () => {
