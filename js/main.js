@@ -23,7 +23,7 @@
 
     document.querySelector('.video-selector').addEventListener('click', () => {
         trailer.querySelector('video').load();
-        trailer.classList.add('active');
+        setTimeout(function(){ trailer.classList.add('active'); }, 200);
     });
     document.querySelector('.modal-video .close').addEventListener('click', () => {
         trailer.classList.remove('active');
