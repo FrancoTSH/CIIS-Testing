@@ -18,11 +18,13 @@
         submenu.classList.toggle('active');
         submenu.classList.contains('active') ? document.querySelector('div.nav-link svg path').setAttribute("d", "M112 328l144-144 144 144"): document.querySelector('div.nav-link svg path').setAttribute("d", "M112 184l144 144 144-144");
     });
+    
+    const playerxd;
 
     document.querySelector('.video-selector').addEventListener('click', () => {
         trailer.querySelector('source').setAttribute("src","assets/videos/video_ciis.mp4");
         if(typeof playerxd === "undefined") {
-            const playerxd = new Plyr('#player');
+            playerxd = new Plyr('#player');
         }
         trailer.classList.add('active');
     });
